@@ -1,6 +1,6 @@
 # The best way to learn React
 
-(The best way to learn React)[https://handsonreact.com/]
+[The best way to learn React](https://handsonreact.com/)
 
 ## Available Scripts
 
