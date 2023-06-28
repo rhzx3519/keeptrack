@@ -4,9 +4,12 @@ import ProjectPage from './projects/ProjectPage';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import HomePage from './home/HomePage';
+import { Provider } from "react-redux";
+import { store } from "./state";
 
 function App() {
     return (
+        <Provider store={store}>
         <Router>
             <header className='sticky'>
                 <span className='logo'>
@@ -29,6 +32,7 @@ function App() {
                 </Routes>
             </div>
         </Router>
+        </Provider>
     );
 }
 

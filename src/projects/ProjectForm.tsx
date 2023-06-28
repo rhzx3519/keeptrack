@@ -3,11 +3,10 @@ import { Project } from './Project';
 
 interface ProjectFormProps {
     project: Project;
-    onSave: (project: Project) => void;
     onCancel: () => void;
 }
 
-export default function ProjectForm({ onCancel, onSave, project: initialProject }: ProjectFormProps) {
+export default function ProjectForm({ onCancel, project: initialProject }: ProjectFormProps) {
     const [project, setProject] = useState(initialProject)
     const [errors, setErrors] = useState({
         name: '',
@@ -18,7 +17,6 @@ export default function ProjectForm({ onCancel, onSave, project: initialProject 
     const handleSubmit = (event: SyntheticEvent) => {
         event.preventDefault();
         if (!isValid) return;
-        onSave(project);
     }
 
     const handleChange = (event: any) => {
